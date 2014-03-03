@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.bluetooth.BluetoothAdapter"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.app.DialogFragment"/>
+<fullyQualifiedTypeName name="java.nio.charset.Charset"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="android.bluetooth.BluetoothSocket"/>
+<fullyQualifiedTypeName name="org.bodtx.telebluetooth.MainActivity.ConnectThread"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="android.os.Looper"/>
+<fullyQualifiedTypeName name="android.os.Message"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="android.os.CountDownTimer"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+</qualifiedTypeNameHistroy>

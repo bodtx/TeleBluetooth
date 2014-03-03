@@ -1,0 +1,7 @@
+1393252631607	Extract local variable 'state'
+1393330678986	Extract local variable 'createRfcommSocketToServiceRecord'
+1393330866111	Extract local variable 'listener'
+1393331310742	Rename field 'message'
+1393331426792	Convert local variable 'listener' to field
+1393506072337	Convert local variable 'socket' to field
+1393518950769	Rename resource 'Bluetooth.png'
