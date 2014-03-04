@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 						BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
 				switch (state) {
 				case BluetoothAdapter.STATE_ON:
-					textView.append("Bluetooth activé\n");
+					textView.append("Bluetooth activÃ©\n");
 					startConnection();
 					break;
 				case BluetoothAdapter.STATE_TURNING_ON:
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 		this.registerReceiver(mReceiver, filter);
 
 		if (mBluetoothAdapter == null) {
-			textView.setText("bluetooth non supporté");
+			textView.setText("bluetooth non supportÃ©");
 		} else {
 			if (!mBluetoothAdapter.isEnabled()) {
 				mBluetoothAdapter.enable();
@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 			}
 		}
 		if(device==null){
-			textView.append("Erreur HC-05 non appairé\n");
+			textView.append("Erreur HC-05 non appairÃ©\n");
 		}
 //		BluetoothDevice device = mBluetoothAdapter
 //				.getRemoteDevice("20:13:10:15:38:91");
@@ -97,7 +97,7 @@ public class MainActivity extends Activity {
 
 			socket.getOutputStream().write("state".getBytes());
 			textView.append("Demande Etat\n");
-			if (socket.getInputStream().available() > 0) {
+//			if (socket.getInputStream().available() > 0) {
 				int state = socket.getInputStream().read();
 				if (48 == state) {
 					textView.append("Allumage\n");
@@ -107,13 +107,14 @@ public class MainActivity extends Activity {
 					socket.getOutputStream().write("off".getBytes());
 				}
 				image.setImageResource(R.drawable.ok);
-			}
+//			}
 			
 			
 
 
 		} catch (IOException e) {
 			Log.e(TAG, e.toString());
+			textView.append("e.getMessage()\n");
 			image.setImageResource(R.drawable.ko);
 		} finally {
 			new CountDownTimer(5000, 1000) {
@@ -141,7 +142,7 @@ public class MainActivity extends Activity {
 		this.unregisterReceiver(mReceiver);
 		textView.append("Fermeture Flux\n");
 		mBluetoothAdapter.disable();
-		textView.append("Désactivation Bluetooth\n");
+		textView.append("DÃ©sactivation Bluetooth\n");
 		
 		super.onDestroy();
 	}
