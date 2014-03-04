@@ -1,6 +1,7 @@
 package org.bodtx.telebluetooth;
 
 import java.io.IOException;
+import java.util.Set;
 import java.util.UUID;
 
 import android.app.Activity;
@@ -73,8 +74,18 @@ public class MainActivity extends Activity {
 	private void startConnection() {
 		ImageView image = (ImageView) findViewById(R.id.imageView1);
 		socket = null;
-		BluetoothDevice device = mBluetoothAdapter
-				.getRemoteDevice("20:13:10:15:38:91");
+		BluetoothDevice device = null ;
+		Set<BluetoothDevice> bondedDevices = mBluetoothAdapter.getBondedDevices();
+		for (BluetoothDevice bondedDevice : bondedDevices) {
+			if(bondedDevice.getName().equals("HC-05")){
+				device = bondedDevice;
+			}
+		}
+		if(device==null){
+			textView.append("Erreur HC-05 non appairé\n");
+		}
+//		BluetoothDevice device = mBluetoothAdapter
+//				.getRemoteDevice("20:13:10:15:38:91");
 		textView.append("Accrochage distant\n");
 
 		mBluetoothAdapter.cancelDiscovery();
